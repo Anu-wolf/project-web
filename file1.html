@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Booking Management System</h1>
+        
+        <!-- Main Menu -->
+        <div id="menu">
+            <button onclick="showForm('haircut')">Book Haircut</button>
+            <button onclick="showForm('plumber')">Book Plumber</button>
+            <button onclick="viewBookings()">View All Bookings</button>
+        </div>
+
+        <!-- Haircut Booking Form -->
+        <div id="haircutForm" class="form">
+            <h2>Book a Haircut</h2>
+            <input type="text" id="haircutCustomer" placeholder="Enter customer name">
+            <input type="text" id="haircutTime" placeholder="Enter appointment time">
+            <input type="text" id="haircutType" placeholder="Enter haircut type (e.g., trim, full cut)">
+            <button onclick="addBooking('Haircut')">Submit</button>
+            <button onclick="hideForm()">Cancel</button>
+        </div>
+
+        <!-- Plumber Booking Form -->
+        <div id="plumberForm" class="form">
+            <h2>Book a Plumber</h2>
+            <input type="text" id="plumberCustomer" placeholder="Enter customer name">
+            <input type="text" id="plumberTime" placeholder="Enter appointment time">
+            <input type="text" id="plumberIssue" placeholder="Enter plumbing issue (e.g., leak, pipe installation)">
+            <button onclick="addBooking('Plumber')">Submit</button>
+            <button onclick="hideForm()">Cancel</button>
+        </div>
+
+        <!-- Booking List -->
+        <div id="bookingList" class="booking-list">
+            <h2>Current Bookings</h2>
+            <ul id="bookings"></ul>
+            <button onclick="hideList()">Close</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
